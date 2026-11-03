@@ -30,9 +30,9 @@ async function criarNovoUsuario(dados) {
     // Dica 1: defina saltRounds = 10
     // Dica 2: gere o salt com bcrypt.genSaltSync(saltRounds)
     // Dica 3: gere o hash com bcrypt.hashSync(passwd, salt)
-    const saltRounds = 
-    const salt = 
-    const senhaHash = 
+    const saltRounds = 10
+    const salt = bcrypt.genSaltSync(saltRounds);
+    const senhaHash = bcrypt.hashSync(passwd, salt);
 
     // TODO: Criar usuário no banco usando o repository
     // Passar: email (username), nome, e senha (senhaHash)

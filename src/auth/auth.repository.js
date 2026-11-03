@@ -21,7 +21,7 @@ async function buscarPorId(email) {
 async function criar(dados) {
     // TODO: Criar um novo usuário no banco de dados
     // Dica: use Usuario.create() passando os dados
-    return 
+    return await Usuario.create(dados);
 }
 
 async function buscarPermissaoPorDescricao(descricao) {
